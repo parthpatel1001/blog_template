@@ -1,0 +1,15 @@
+# Site settings
+title: Fancy Title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Fancy description
+baseurl: "/fancyblog" # the subpath of your site, e.g. /blog/
+url: "https://parthpatel1001.github.io" # the base hostname & protocol for your site # leave for now
+#twitter_username: parthpatel1001
+#github_username:  parthpatel1001
+
+# Build settings
+markdown: kramdown
+
+# format links
+permalink: /:year/:month/:day/:title.html
