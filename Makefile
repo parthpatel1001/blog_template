@@ -9,6 +9,7 @@ init:
 	mkdir -p ../$(NAME)
 	cp -R ../blog_template/* ../$(NAME)
 	rm -rf ../$(NAME)/.git
+	cp ../blog_template/.gitignore ../$(NAME)
 	git init ../$(NAME)
 	cd ../$(NAME) && git add .
 	cd ../$(NAME) && git commit -m "Initial commit."
