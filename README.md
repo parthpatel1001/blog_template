@@ -9,6 +9,7 @@ New posts go in `_posts` & have to follow the naming convention `YYYY-MM-DD-fdsa
 ```sh
 make post date=2017-08-09 title=test_post
 ```
+*note can not have spaces in title*
 
 # Assets
 Add images in `assets/`.
