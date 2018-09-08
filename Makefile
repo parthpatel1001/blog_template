@@ -6,13 +6,13 @@ guard-%:
 
 init: guard-NAME
 init:
-	cd ../
-	cp -R blog_template $(NAME)
-	rm -rf .git
-	cd $(NAME)
-	git init
-	git add .
-	git commit -m "Initial commit."
+	mkdir -p ../$(NAME)
+	cp -R ../blog_template/* ../$(NAME)
+	rm -rf ../$(NAME)/.git
+	git init ../$(NAME)
+	cd ../$(NAME) && git add .
+	cd ../$(NAME) && git commit -m "Initial commit."
+	echo "$(NAME) blog created at ../$(NAME)"
 
 serve:
 	jekyll serve --config _config.yml,_config_dev.yml
