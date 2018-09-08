@@ -17,3 +17,12 @@ init:
 
 serve:
 	jekyll serve --config _config.yml,_config_dev.yml
+
+post: guard-date
+post: guard-title
+post:
+	@cp _posts/template.md _posts/$(date)-$(title).md
+	@sed -i.bak 's,DATE,$(date),g' _posts/$(date)-$(title).md
+	@sed -i.bak 's,TITLE,$(title),g' _posts/$(date)-$(title).md
+	@rm _posts/$(date)-$(title).md.bak
+	@echo "created post: _posts/$(date)-$(title).md"
